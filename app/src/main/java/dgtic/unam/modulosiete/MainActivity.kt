@@ -51,6 +51,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.collapsing->{
                 startActivity(Intent(this,CollapsingToolbarLayout::class.java))
             }
+            R.id.recyclerView->{
+                startActivity(Intent(this,RecyclerView::class.java))
+            }
         }
         drawer.closeDrawer(GravityCompat.START)
         return true

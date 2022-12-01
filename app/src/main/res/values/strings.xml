@@ -70,5 +70,6 @@
     <string name="serie_x">Serie X</string>
     <string name="logo_compra">logo compra</string>
     <string name="collapsingtoolbarlayout">Collapsingtoolbarlayout</string>
+    <string name="recyclerView">RecyclerView</string>
 
 </resources>
