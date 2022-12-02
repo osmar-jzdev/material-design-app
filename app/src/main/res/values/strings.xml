@@ -71,6 +71,8 @@
     <string name="logo_compra">logo compra</string>
     <string name="collapsingtoolbarlayout">Collapsingtoolbarlayout</string>
     <string name="recyclerView">RecyclerView</string>
-    <string name="imagen_pelicula">Imagen Pelicula</string>
+    <string name="imagen_content">Imagen Del Item</string>
     <string name="video">Video</string>
+    <string name="canciones_mp3">Canciones MP3</string>
+    <string name="sonido">Sonido</string>
 </resources>

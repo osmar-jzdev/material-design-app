@@ -31,7 +31,7 @@ class RecipeAdapter(context: Context,private val list:ArrayList<Modelo>): BaseAd
     override fun getView(p0: Int, p1: View?, p2: ViewGroup?): View {
         var view=inflter.inflate(R.layout.list_item_row,null)
         val file:TextView= view.findViewById(R.id.title)
-        val image:ImageView=view.findViewById(R.id.image_pel)
+        val image:ImageView=view.findViewById(R.id.image_content)
         file.text=list[p0].namefile
         image.setImageResource(list[p0].nameImage)
         return view

@@ -27,6 +27,10 @@
                 android:id="@+id/video"
                 android:icon="@drawable/ic_baseline_description_24"
                 android:title="@string/video" />
+            <item
+                android:id="@+id/sonido"
+                android:icon="@drawable/ic_baseline_description_24"
+                android:title="@string/sonido" />
         </menu>
     </item>
 </group>

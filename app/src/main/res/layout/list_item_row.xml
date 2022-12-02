@@ -4,10 +4,10 @@
     android:layout_height="match_parent"
     android:orientation="horizontal">
     <ImageView
-        android:id="@+id/image_pel"
+        android:id="@+id/image_content"
         android:layout_width="80dp"
         android:layout_height="50dp"
-        android:contentDescription="@string/imagen_pelicula" />
+        android:contentDescription="@string/imagen_content" />
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"

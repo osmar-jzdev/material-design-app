@@ -18,6 +18,10 @@ class Video : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityVideoBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setHomeButtonEnabled(true)
+
         val controller = MediaController(this)
         binding.surface.setMediaController(controller)
         controller.setAnchorView(binding.surface)
@@ -44,13 +48,18 @@ class Video : AppCompatActivity() {
         })
     }
 
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
+    }
+
     private fun fillList() {
         model = ArrayList()
-        model.add(Modelo("video.3gp", R.drawable.video_uno,1))
+        model.add(Modelo("video.3gp", R.drawable.video_uno,1, ""))
         model.add(
             Modelo(
                 "https://archive.org/download/ElephantsDream/ed_hd.mp4",
-                R.drawable.video_dos,2
+                R.drawable.video_dos,2, ""
             )
         )
         adap = RecipeAdapter(this, model)
