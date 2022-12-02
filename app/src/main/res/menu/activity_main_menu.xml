@@ -23,6 +23,10 @@
                 android:id="@+id/recyclerView"
                 android:icon="@drawable/ic_baseline_description_24"
                 android:title="@string/recyclerView" />
+            <item
+                android:id="@+id/video"
+                android:icon="@drawable/ic_baseline_description_24"
+                android:title="@string/video" />
         </menu>
     </item>
 </group>

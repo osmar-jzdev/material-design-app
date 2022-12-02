@@ -54,6 +54,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.recyclerView->{
                 startActivity(Intent(this,RecyclerView::class.java))
             }
+            R.id.video->{
+                startActivity(Intent(this,Video::class.java))
+            }
         }
         drawer.closeDrawer(GravityCompat.START)
         return true

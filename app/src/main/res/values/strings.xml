@@ -71,5 +71,6 @@
     <string name="logo_compra">logo compra</string>
     <string name="collapsingtoolbarlayout">Collapsingtoolbarlayout</string>
     <string name="recyclerView">RecyclerView</string>
-
+    <string name="imagen_pelicula">Imagen Pelicula</string>
+    <string name="video">Video</string>
 </resources>
