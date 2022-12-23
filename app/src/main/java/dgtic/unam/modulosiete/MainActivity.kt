@@ -1,5 +1,6 @@
 package dgtic.unam.modulosiete
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -11,6 +12,7 @@ import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
+import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -31,6 +33,15 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         toggle.syncState()
         toolbar.setNavigationIcon(R.drawable.unam_32)
         iniciarNavegacionView()
+
+        //retreive data from the login activity
+        var bundle:Bundle? = intent.extras
+        var email:String? =  bundle?.getString("email")
+        //save current session data
+        val preferences =  getSharedPreferences(getString(R.string.preference_file_path),
+            Context.MODE_PRIVATE).edit()
+        preferences.putString("email", email)
+        preferences.apply()
     }
 
     private fun iniciarNavegacionView() {
@@ -59,6 +70,14 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             }
             R.id.sonido->{
                 startActivity(Intent(this,Sonido::class.java))
+            }
+            R.id.logout->{
+                val preferences = getSharedPreferences(getString(R.string.preference_file_path), Context.MODE_PRIVATE).edit()
+                preferences.clear()
+                preferences.apply()
+                FirebaseAuth.getInstance().signOut()
+                startActivity(Intent(this, Login::class.java))
+                finish()
             }
         }
         drawer.closeDrawer(GravityCompat.START)

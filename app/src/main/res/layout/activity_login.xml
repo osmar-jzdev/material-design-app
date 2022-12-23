@@ -55,15 +55,31 @@
         app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/username" />
-    <Button
-        android:id="@+id/login"
-        android:layout_width="match_parent"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/loginbtn"
+        android:layout_width="140dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="112dp"
-        android:text="@string/login"
+        android:layout_below="@id/password"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="84dp"
         android:backgroundTint="@color/boton"
+        android:text="@string/entrar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.059"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/password" />
+        app:layout_constraintTop_toBottomOf="@+id/password" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/updateUser"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/password"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="84dp"
+        android:backgroundTint="@color/boton"
+        android:text="@string/registrar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.937"
+        app:layout_constraintStart_toStartOf="@+id/loginbtn"
+        app:layout_constraintTop_toBottomOf="@+id/password" />
 </androidx.constraintlayout.widget.ConstraintLayout>

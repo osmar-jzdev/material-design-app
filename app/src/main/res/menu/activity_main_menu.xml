@@ -31,6 +31,10 @@
                 android:id="@+id/sonido"
                 android:icon="@drawable/ic_baseline_description_24"
                 android:title="@string/sonido" />
+            <item
+                android:id="@+id/logout"
+                android:icon="@drawable/ic_baseline_description_24"
+                android:title="@string/cerrar_sesion" />
         </menu>
     </item>
 </group>
