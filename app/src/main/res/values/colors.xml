@@ -9,6 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="fondo_color">#E92DBAFA</color>
     <color name="menu_color">#D88FC8E3</color>
+    <color name="boton">#295FA1</color>
 
     <integer-array name="inicio_colores">
         <item>@color/purple_200</item>
